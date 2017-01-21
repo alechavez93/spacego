@@ -1,0 +1,10 @@
+# WebStorm specific files #
+.idea
+
+# Transpiled JavaScript
+*.js
+*.map
+
+# Node Package Dependencies
+*node_modules
+*bower_components
