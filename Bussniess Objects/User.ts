@@ -9,14 +9,14 @@
 import {Coordinate, Gender} from './UtilityClasses';
 
 class User{
-    private userId: String;
-    public name : String;
+    private userId: string;
+    public name : string;
     public gender : Gender;
     public age : number;
     public coordinate : Coordinate;
-    public picture : String;
+    public picture : string;
 
-    constructor(userId : String, name : String = "No name", gender : Gender = Gender.DontAssumeMyGender, age : number = -1, coordinate : Coordinate = Coordinate.getNullCoordinate(), picture : String = "") {
+    constructor(userId : string, name : string = "No name", gender : Gender = Gender.DontAssumeMyGender, age : number = -1, coordinate : Coordinate = Coordinate.getNullCoordinate(), picture : string = "") {
         this.userId = userId;
         this.name = name;
         this.gender = gender;
@@ -25,7 +25,14 @@ class User{
         this.picture = picture;
     }
 
-    public getUserId() : String {return this.userId;}
+    public getUserId() : string {return this.userId;}
+
+
+    public toString():string{
+        return "ID :    " + this.getUserId() +
+            "\n Name:   " + this.name +
+            "\n Gender: " + this.gender;
+    }
 }
 
 export {User};

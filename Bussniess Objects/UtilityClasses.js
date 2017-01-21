@@ -14,14 +14,17 @@ var Coordinate = (function () {
         c.longitude = -1;
         return c;
     };
+    Coordinate.prototype.toString = function () {
+        return this.latitude + "," + this.longitude;
+    };
     return Coordinate;
 }());
 exports.Coordinate = Coordinate;
 var Gender;
 (function (Gender) {
-    Gender[Gender["Male"] = 0] = "Male";
-    Gender[Gender["Female"] = 1] = "Female";
-    Gender[Gender["DontAssumeMyGender"] = 2] = "DontAssumeMyGender";
+    Gender[Gender["Male"] = "Male"] = "Male";
+    Gender[Gender["Female"] = "Female"] = "Female";
+    Gender[Gender["DontAssumeMyGender"] = "Don't assume my gender"] = "DontAssumeMyGender";
 })(Gender || (Gender = {}));
 exports.Gender = Gender;
 //# sourceMappingURL=UtilityClasses.js.map

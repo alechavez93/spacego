@@ -21,6 +21,11 @@ var User = (function () {
         this.picture = picture;
     }
     User.prototype.getUserId = function () { return this.userId; };
+    User.prototype.toString = function () {
+        return "ID :    " + this.getUserId() +
+            "\n Name:   " + this.name +
+            "\n Gender: " + this.gender;
+    };
     return User;
 }());
 exports.User = User;

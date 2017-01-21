@@ -16,4 +16,7 @@ app.get("/testAPI", function (req, res) {
         "-Ale");
 });
 app.listen(process.env.PORT || 4000);
+/*------------------------------ test
+====================================== */
+console('test');
 //# sourceMappingURL=server.js.map

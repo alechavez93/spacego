@@ -9,6 +9,7 @@ class Coordinate {
     public latitude  : number;
     public longitude : number;
 
+
     public static getNullCoordinate():Coordinate{
         let c = new Coordinate();
         c.latitude = -1;
@@ -16,12 +17,16 @@ class Coordinate {
 
         return c;
     }
+
+    public toString():string{
+        return this.latitude + "," + this.longitude;
+    }
 }
 
 enum Gender{
-    Male,
-    Female,
-    DontAssumeMyGender
+    Male = <any>"Male",
+    Female = <any>"Female",
+    DontAssumeMyGender = <any>"Don't assume my gender"
 }
 
 export {Coordinate,Gender}

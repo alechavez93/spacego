@@ -5,12 +5,24 @@
 |
 ---------------------------------------------------------------------------------------*/
 "use strict";
+var UtilityClasses_1 = require('./UtilityClasses');
 var Place = (function () {
-    function Place() {
+    function Place(placeId, name, coordinate, peopleCount, genderAmount, avgAge) {
+        if (name === void 0) { name = "No name"; }
+        if (coordinate === void 0) { coordinate = UtilityClasses_1.Coordinate.getNullCoordinate(); }
+        if (peopleCount === void 0) { peopleCount = 0; }
+        if (avgAge === void 0) { avgAge = 0; }
+        this.placeId = placeId;
+        this.name = name;
+        this.coordinate = coordinate;
+        this.peopleCount = peopleCount;
+        this.genderAmount = genderAmount;
+        this.avgAge = avgAge;
     }
-    Place.prototype.getPeopleCount = function () {
-        return 0;
+    Place.prototype.addUser = function (userId) {
     };
+    Place.prototype.getPlaceId = function () { return this.placeId; };
     return Place;
 }());
+exports.Place = Place;
 //# sourceMappingURL=Place.js.map
