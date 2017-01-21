@@ -2,7 +2,6 @@
 .idea
 
 # Transpiled JavaScript
-*.js
 *.map
 
 # Node Package Dependencies
