@@ -12,7 +12,8 @@ app.get("/", function (req, res) {
 app.get("/testAPI", function (req, res) {
     res.send("This is a test response\n" +
         "You have successfully sent an http request to spacego API\n" +
-        "This is what you sent: \n" + JSON.stringify(req));
+        "This is what you sent (Headers): \n" + JSON.stringify(req.headers) + "\n\n" +
+        "-Ale");
 });
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 4000);
 //# sourceMappingURL=server.js.map
