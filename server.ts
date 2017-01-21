@@ -19,7 +19,7 @@ app.get("/mainAPI", function(req, res){
        "-Ale");
 });
 
-app.post("mainAPI", function(req, res){
+app.post("/mainAPI", function(req, res){
    res.send("This is a test response for POST http requests\n" +
         "The Headers were: \n" + JSON.stringify(req.headers)+"\n\n" +
         "The Body was: \n" + JSON.stringify(req.body) + "\n\n" +
