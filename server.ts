@@ -9,6 +9,10 @@ let express = require("express");
 let app = express();
 
 app.get("/", function(req, res){
+   res.sendFile(__dirname+"/index.html");
+});
+
+app.get("/testAPI", function(req, res){
    res.send("This is a test response\n" +
        "You have successfully sent an http request to spacego API\n" +
        "This is what you sent: \n" + JSON.stringify(req));
