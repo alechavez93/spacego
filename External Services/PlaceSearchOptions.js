@@ -9,9 +9,11 @@ var PlaceSearchOptions = (function () {
     function PlaceSearchOptions(location, radius) {
         this.location = location;
         this.radius = radius;
-        this.types = "night_club";
+        this.type = "night_club";
+        this.key = "AIzaSyD1whdcvkuAPmUGCu1ddIpaO1CMCreWYKY";
     }
-    PlaceSearchOptions.prototype.setAdtionalParams = function () {
+    PlaceSearchOptions.prototype.getJSON = function () {
+        return JSON.parse(JSON.stringify(this));
     };
     return PlaceSearchOptions;
 }());

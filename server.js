@@ -4,6 +4,7 @@
 |   Description: Starts
 |
 ---------------------------------------------------------------------------------------*/
+var bodyParser = require("body-parser");
 var express = require("express");
 var app = express();
 app.get("/", function (req, res) {
@@ -21,5 +22,8 @@ app.post("/mainAPI", function (req, res) {
         "The Body was: \n" + JSON.stringify(req.body) + "\n\n" +
         "-Ale");
 });
+//Parsing requests
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.listen(process.env.PORT || 4000);
 //# sourceMappingURL=server.js.map

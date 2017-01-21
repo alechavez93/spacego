@@ -5,6 +5,7 @@
 |
 ---------------------------------------------------------------------------------------*/
 
+let bodyParser = require("body-parser");
 let express = require("express");
 let app = express();
 
@@ -25,5 +26,9 @@ app.post("/mainAPI", function(req, res){
         "The Body was: \n" + JSON.stringify(req.body) + "\n\n" +
         "-Ale");
 });
+
+//Parsing requests
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.listen(process.env.PORT || 4000);

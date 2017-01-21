@@ -8,18 +8,20 @@
 class PlaceSearchOptions{
     public location: string;
     public radius: number;
-    public types: string;
+    public type: string;
     public keyword: string;
+    public opennow: boolean;
     public key: string;
 
     constructor(location: string, radius: number){
         this.location = location;
         this.radius = radius;
-        this.types = "night_club";
+        this.type = "night_club";
+        this.key = "AIzaSyD1whdcvkuAPmUGCu1ddIpaO1CMCreWYKY";
     }
 
-    setAdtionalParams(){
-
+    getJSON(){
+        return JSON.parse(JSON.stringify(this));
     }
 }
 
