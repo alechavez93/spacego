@@ -52,7 +52,7 @@ class DataHolder {
         for (let item in this.places) {
             if(this.unitIsInPlace(newUser.coordinate, this.places[item].coordinate)){
                 this.places[item].addUser(newUser.getUserId());
-                
+
             }
         }
     }
