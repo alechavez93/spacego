@@ -7,6 +7,9 @@
 var bodyParser = require("body-parser");
 var express = require("express");
 var app = express();
+//Parsing requests
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/", function (req, res) {
     res.sendFile(__dirname + "/index.html");
 });
@@ -22,8 +25,5 @@ app.post("/mainAPI", function (req, res) {
         "The Body was: \n" + JSON.stringify(req.body) + "\n\n" +
         "-Ale");
 });
-//Parsing requests
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 app.listen(process.env.PORT || 4000);
 //# sourceMappingURL=server.js.map
