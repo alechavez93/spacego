@@ -27,4 +27,11 @@ var Gender;
     Gender[Gender["DontAssumeMyGender"] = "Don't assume my gender"] = "DontAssumeMyGender";
 })(Gender || (Gender = {}));
 exports.Gender = Gender;
+var Sign;
+(function (Sign) {
+    Sign[Sign["Less"] = "-"] = "Less";
+    Sign[Sign["Equal"] = "="] = "Equal";
+    Sign[Sign["More"] = "+"] = "More";
+})(Sign || (Sign = {}));
+exports.Sign = Sign;
 //# sourceMappingURL=UtilityClasses.js.map

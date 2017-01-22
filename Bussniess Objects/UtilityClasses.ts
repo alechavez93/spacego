@@ -29,4 +29,10 @@ enum Gender{
     DontAssumeMyGender = <any>"Don't assume my gender"
 }
 
-export {Coordinate,Gender}
+enum Sign{
+    Less = <any>"-",
+    Equal = <any>"=",
+    More = <any>"+"
+}
+
+export {Coordinate,Gender,Sign}
