@@ -6,7 +6,7 @@
 "use strict";
 var Request_1 = require("./Request");
 module.exports = function (app) {
-    app.post("/test", function (req, res) {
+    app.post("/mainAPI", function (req, res) {
         res.send(parseRequest(req));
     });
 };

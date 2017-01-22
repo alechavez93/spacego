@@ -39,6 +39,6 @@ class GooglePlaces{
 export {GooglePlaces}
 
 //Test
-// let options = new PlaceSearchOptions("29.648080,-82.343496", 5000);
-// GooglePlaces.getPlaces(options, null, null);
+let options = new PlaceSearchOptions("29.648080,-82.343496", 5000);
+GooglePlaces.getPlaces(options, null, null);
 

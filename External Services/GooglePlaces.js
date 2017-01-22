@@ -6,6 +6,7 @@
 ---------------------------------------------------------------------------------------*/
 "use strict";
 var request = require('request');
+var PlaceSearchOptions_1 = require("./PlaceSearchOptions");
 var GooglePlaces = (function () {
     function GooglePlaces() {
     }
@@ -33,6 +34,6 @@ var GooglePlaces = (function () {
 }());
 exports.GooglePlaces = GooglePlaces;
 //Test
-// let options = new PlaceSearchOptions("29.648080,-82.343496", 5000);
-// GooglePlaces.getPlaces(options, null, null);
+var options = new PlaceSearchOptions_1.PlaceSearchOptions("29.648080,-82.343496", 5000);
+GooglePlaces.getPlaces(options, null, null);
 //# sourceMappingURL=GooglePlaces.js.map

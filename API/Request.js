@@ -37,7 +37,6 @@ var Request = (function () {
         this.userId = req.body.userId;
         this.password = req.body.password;
         //Filters
-        this.radius = req.radius;
         var filterMap = {
             "+": UtilityClasses_1.Sign.More,
             "-": UtilityClasses_1.Sign.Less,
@@ -45,15 +44,27 @@ var Request = (function () {
             "f": UtilityClasses_1.Gender.Female,
             "m": UtilityClasses_1.Gender.Male
         };
+        if (req.radius) {
+            this.radius = req.radius;
+        }
         //Populating the filters
-        var format = req.body.ratio.split("|");
-        this.ratioFilter = new RatioFilter(filterMap[format[0]], parseInt(format[1]), filterMap[format[2]]);
-        format = req.body.peopleGoing.split("|");
-        this.peopleGoingFilter = new Filter(filterMap[format[0]], parseInt(format[1]));
-        format = req.body.peopleThere.split("|");
-        this.peopleThereFilter = new Filter(filterMap[format[0]], parseInt(format[1]));
-        format = req.body.rating.split("|");
-        this.rating = new Filter(filterMap[format[0]], parseInt(format[1]));
+        var format;
+        if (req.body.ratio) {
+            format = req.body.ratio.split("|");
+            this.ratioFilter = new RatioFilter(filterMap[format[0]], parseFloat(format[1]), filterMap[format[2]]);
+        }
+        if (req.body.peopleGoing) {
+            format = req.body.peopleGoing.split("|");
+            this.peopleGoingFilter = new Filter(filterMap[format[0]], parseInt(format[1]));
+        }
+        if (req.body.peopleThere) {
+            format = req.body.peopleThere.split("|");
+            this.peopleThereFilter = new Filter(filterMap[format[0]], parseInt(format[1]));
+        }
+        if (req.body.rating) {
+            format = req.body.rating.split("|");
+            this.rating = new Filter(filterMap[format[0]], parseInt(format[1]));
+        }
     }
     return Request;
 }());

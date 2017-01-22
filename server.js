@@ -13,11 +13,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/", function (req, res) {
     res.sendFile(__dirname + "/index.html");
 });
-app.get("/mainAPI", function (req, res) {
-    res.send(req.headers);
-});
-app.post("/mainAPI", function (req, res) {
-    res.send(req.body);
-});
+require("./API/getPlaces")(app);
 app.listen(process.env.PORT || 4000);
 //# sourceMappingURL=server.js.map
