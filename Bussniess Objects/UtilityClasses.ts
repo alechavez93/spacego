@@ -26,7 +26,7 @@ class Coordinate {
 enum Gender{
     Male = <any>"Male",
     Female = <any>"Female",
-    DontAssumeMyGender = <any>"Don't assume my gender"
+    DontAssumeMyGender = <any>"DontAssumeMyGender"
 }
 
 export {Coordinate,Gender}
