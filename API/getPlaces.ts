@@ -1,7 +1,16 @@
 /*--------------------------------------------------------------------------------------
- |	mainAPI Module: Created by Jorge Varela on 1/20/2017.
+ |	getPlaces Module: Created by Jorge Varela on 1/20/2017.
  |---------------------------------------------------------------------------------------
- |   Description: main API so clients can access main functionality
- |
+ |   Description: Handles requests made by the client on getting Places data
  ---------------------------------------------------------------------------------------*/
 
+
+module.exports = function(app){
+    app.post("/mainAPI", function(req, res){
+
+    });
+};
+
+function parseRequest(req){
+
+}
