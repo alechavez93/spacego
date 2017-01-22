@@ -24,7 +24,7 @@ var Gender;
 (function (Gender) {
     Gender[Gender["Male"] = "Male"] = "Male";
     Gender[Gender["Female"] = "Female"] = "Female";
-    Gender[Gender["DontAssumeMyGender"] = "Don't assume my gender"] = "DontAssumeMyGender";
+    Gender[Gender["DontAssumeMyGender"] = "DontAssumeMyGender"] = "DontAssumeMyGender";
 })(Gender || (Gender = {}));
 exports.Gender = Gender;
 var Sign;

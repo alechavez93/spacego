@@ -15,6 +15,7 @@ class User{
     public age : number;
     public coordinate : Coordinate;
     public picture : string;
+    public placeId : string;
 
     constructor(userId : string, name : string = "No name", gender : Gender = Gender.DontAssumeMyGender, age : number = -1, coordinate : Coordinate = Coordinate.getNullCoordinate(), picture : string = "") {
         this.userId = userId;
@@ -23,15 +24,15 @@ class User{
         this.age = age;
         this.coordinate = coordinate;
         this.picture = picture;
+        this.placeId = null;
     }
 
     public getUserId() : string {return this.userId;}
 
-
     public toString():string{
-        return "ID :    " + this.getUserId() +
-            "\n Name:   " + this.name +
-            "\n Gender: " + this.gender;
+        return "ID: " + this.getUserId() +
+            "|| Name: " + this.name +
+            "|| Gender: " + this.gender;
     }
 }
 

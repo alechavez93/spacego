@@ -19,12 +19,13 @@ var User = (function () {
         this.age = age;
         this.coordinate = coordinate;
         this.picture = picture;
+        this.placeId = null;
     }
     User.prototype.getUserId = function () { return this.userId; };
     User.prototype.toString = function () {
-        return "ID :    " + this.getUserId() +
-            "\n Name:   " + this.name +
-            "\n Gender: " + this.gender;
+        return "ID: " + this.getUserId() +
+            "|| Name: " + this.name +
+            "|| Gender: " + this.gender;
     };
     return User;
 }());
